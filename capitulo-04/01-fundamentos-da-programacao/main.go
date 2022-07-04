@@ -43,4 +43,18 @@ func main() {
 	fmt.Printf("%v - %T\n", numInt, numInt)
 	fmt.Printf("%v - %T\n", numFloat, numFloat)
 
+	fmt.Println("")
+	const (
+		e = iota
+		f = iota
+		g = iota
+	)
+	fmt.Println(e, f, g)
+
+	fmt.Println("")
+	fmt.Println("Deslocamento de bits")
+	x := 5
+	y := x << 1
+	z := y << 1
+	fmt.Printf("%b\n%b\n%b\n", x, y, z)
 }
