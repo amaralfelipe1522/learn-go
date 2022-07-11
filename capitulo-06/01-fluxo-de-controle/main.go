@@ -22,4 +22,22 @@ func main() {
 		}
 		fmt.Printf("Número par encontrado: %d\n", i)
 	}
+
+	// Utilizando ASCII
+	for num := 33; num <= 122; num++ {
+		fmt.Printf("Decimal: %d\tHexadecimal: %#x\tUnicode: %#U\n", num, num, num)
+	}
+
+	num := 20
+
+	switch {
+	case num < 20:
+		fmt.Println("Menor que 20")
+		fallthrough
+	case num > 20:
+		fmt.Println("Maior que 20")
+	default:
+		fmt.Println("Igual a 20")
+	}
+
 }
