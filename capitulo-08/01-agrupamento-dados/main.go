@@ -50,6 +50,45 @@ func main() {
 	exMake = append(exMake, 80)
 	exMake = append(exMake, 90)
 	exMake = append(exMake, 100)
-	exMake = append(exMake, 110) // aumenta a capacidade máxima automaticamente
+	exMake = append(exMake, 110) // cria automaticamente outro array com uma capacidade máxima maior
 	fmt.Printf("Values: %v\tLength: %v\t Capacity: %v\n", exMake, len(exMake), cap(exMake))
+
+	// Slice Multi dimensionais - Slice of slices
+	sliceBi := [][]string{
+		{"O", " ", "X"},
+		{"O", "X", " "},
+		{"X", " ", "O"},
+	}
+	fmt.Println(sliceBi[0])
+	fmt.Println(sliceBi[1])
+	fmt.Println(sliceBi[2])
+
+	sliceBi[0][2] = "batata"
+	fmt.Println(sliceBi[0])
+
+	// A surpresa do Array Subjacente
+	primeiroArray := []int{1, 2, 3, 4, 5}
+	fmt.Println(primeiroArray)
+
+	segundoArray := append(primeiroArray[:2], primeiroArray[4:]...)
+	fmt.Println(segundoArray)
+
+	fmt.Println(primeiroArray) // o segundoArray utilizou o mesmo array subjacente
+
+	fmt.Println(&primeiroArray[0]) // Utilizam o mesmo endereço de memória
+	fmt.Println(&segundoArray[0])  // Para evitar isso, recomendasse usar FOR LOOP e copiar cada elemento separadamente do array/slice.. ou sobrescrever a mesma variável
+
+	// Maps - Conjunto de dados com chave e valor, como por exemplo agenda telefonica com nome e telefone
+	agendaTelefonica := map[string]int{
+		"Celta": 12345678,
+		"Carol": 87654321,
+	}
+
+	agendaTelefonica["Gopher"] = 101010
+
+	fmt.Println(agendaTelefonica["Celta"])
+	fmt.Println(agendaTelefonica["Gopher"])
+
+	searchMap, ok := agendaTelefonica["Kaique"]
+	fmt.Printf("Valor: %v\tRetorno Bool: %v\n", searchMap, ok) // Retorna 0 (false) quando não encontra a chave no mapa - comma OK
 }
