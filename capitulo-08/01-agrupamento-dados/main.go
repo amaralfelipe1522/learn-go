@@ -91,4 +91,12 @@ func main() {
 
 	searchMap, ok := agendaTelefonica["Kaique"]
 	fmt.Printf("Valor: %v\tRetorno Bool: %v\n", searchMap, ok) // Retorna 0 (false) quando não encontra a chave no mapa - comma OK
+
+	// Range em Maps não exibem os valores na mesma ordem
+	for key, value := range agendaTelefonica {
+		fmt.Printf("Chave: %v\tValor: %v\n", key, value)
+	}
+
+	// Deletar um elemento do Map
+	delete(agendaTelefonica, "Gopher")
 }
