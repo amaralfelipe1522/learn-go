@@ -41,4 +41,48 @@ func main() {
 			fmt.Printf("\t%v\n", sorvete)
 		}
 	}
+
+	// Exercício 3
+	type Veiculo struct {
+		portas int
+		cor    string
+	}
+
+	type Caminhonete struct {
+		Veiculo
+		quatroRodas bool
+	}
+
+	type Sedan struct {
+		Veiculo
+		modeloLuxo bool
+	}
+
+	pajero := Caminhonete{
+		Veiculo{4, "azul"},
+		true,
+	}
+
+	fmt.Printf("Modelo da caminhonete possui %v portas e é da cor %v\n", pajero.portas, pajero.cor)
+
+	vectra := Sedan{
+		Veiculo{4, "preto"},
+		true,
+	}
+
+	fmt.Printf("Modelo do sedan possui %v portas e é da cor %v\n", vectra.portas, vectra.cor)
+
+	// Exercício 4
+	compras := struct {
+		local   map[string]int
+		compras []string
+	}{
+		map[string]int{
+			"Valor": 200,
+		},
+		[]string{"Encosto de cama", "ventilador de teto"},
+	}
+
+	fmt.Println(compras.compras[0])
+	fmt.Println(compras.local["Valor"])
 }
