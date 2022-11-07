@@ -35,6 +35,14 @@ func main() {
 			"Vectra A",
 			151,
 			9,
+		}, {
+			"Chevette",
+			200,
+			8,
+		}, {
+			"Palio",
+			79,
+			10,
 		},
 	}
 
