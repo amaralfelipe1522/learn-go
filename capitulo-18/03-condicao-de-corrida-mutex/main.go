@@ -16,7 +16,7 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	var mutex sync.Mutex
+	var mutex sync.Mutex // Mutex impede de ocorrer a race condition, obrigando que uma go routine espere a outra
 
 	wg.Add(totalGoroutines)
 
@@ -36,5 +36,5 @@ func main() {
 		}()
 	}
 	wg.Wait()
-	fmt.Println("Valor final do contador: ", count) // Retona valores variados, apesar de 10 functions serem chamadas ao mesmo tempo
+	fmt.Println("Valor final do contador: ", count)
 }

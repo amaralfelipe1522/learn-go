@@ -23,7 +23,7 @@ func main() {
 		go func() {
 			defer wg.Done()
 
-			atomic.AddInt64(&count, 1) // incrementa valor do contador
+			atomic.AddInt64(&count, 1) // incrementa valor do contador de forma atomica de memoria primitiva, em baixo nível
 
 			runtime.Gosched() // Ativa função Yield
 			time.Sleep(800)
