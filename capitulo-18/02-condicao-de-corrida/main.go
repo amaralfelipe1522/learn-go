@@ -6,6 +6,8 @@ import (
 	"sync"
 )
 
+// Verificar se há race condition em tempo de execução: go run -race main.go
+
 func main() {
 
 	var count = 0
