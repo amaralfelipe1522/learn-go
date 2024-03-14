@@ -28,16 +28,16 @@ func main() {
 		fmt.Printf("Decimal: %d\tHexadecimal: %#x\tUnicode: %#U\n", num, num, num)
 	}
 
-	num := 20
+	num := 8
 
 	switch {
-	case num < 20:
-		fmt.Println("Menor que 20")
+	case num < 10:
+		fmt.Println("Menor que 10")
 		fallthrough
-	case num > 20:
-		fmt.Println("Maior que 20")
+	case num < 50:
+		fmt.Println("Menor que 50")
 	default:
-		fmt.Println("Igual a 20")
+		fmt.Println("Maior que 50")
 	}
 
 }
