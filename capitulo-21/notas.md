@@ -15,3 +15,11 @@
 
 - Select é como o Switch, mas para Canais, e não é sequencial;
 - Canal é bloqueado até que algum dos casos determinados seja atendido. Caso tenha mais de uma opção válida, é escolhido de forma aleatória;
+
+## Comma OK
+
+- Usado para se ter certeza de que estamos recebendo um valor do canal
+
+## Convergência
+
+- Necessário quando há mais canais enviando dados do que recebendo, sendo assim necessario convergir esses valores;
