@@ -28,7 +28,7 @@ func main() {
 
 func outra(canal1, canal2 chan int) {
 	var wg sync.WaitGroup
-	// Diverge o trabalho em N GO Routines
+	// Diverge o trabalho em N GO Routines (usar throttling para não sobrecarregar o processador no próximo exemplo)
 	for v := range canal1 {
 		wg.Add(1)
 		go func (v int)  {
